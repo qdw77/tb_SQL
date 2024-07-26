@@ -49,7 +49,8 @@ public class jdbc_test2 {
 							+ "    INNER JOIN tb_student_info student\r\n"
 							+ "    on school.school_id = student.school_id\r\n"
 							+ "    and student.student_graduate_yn = 'N'\r\n"
-							+ "    WHERE school.school_name ='우송고등학교';";
+							+ "    WHERE school.school_name ='우송고등학교';"/*"    WHERE school.school_name =?;"*/
+							;
 					//우송고등학교에 재학 중인 학생들을 출력
 					//쿼리를 작성해서 입력
 //					String sql = "";
