@@ -74,7 +74,7 @@ public class jdbc_test2 {
 //						rsMap.put("schoolName", rs.getString(2));
 //						rsMap.put("schoolArea", rs.getString(3));
 //						rsMap.put("studentName", rs.getString(4));
-//						rsMap.put("graduate", rs.getString("재학 여부"));			
+//						rsMap.put("graduate", rs.getString("재학 여부"));	<as 값을 넣었을 때 안 넣었다면 if 값을 전부 넣거나 아예 안 넣었다면 5로 작성해도 괜찮다		
 						list.add(rsMap);
 
 					}
