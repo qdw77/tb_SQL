@@ -44,7 +44,7 @@ public class jdbc_test2 {
 							+ "	school.school_name as schoolName,\r\n"
 							+ "    school.school_area as schoolArea,\r\n"
 							+ "    student.student_name as studentName,\r\n"
-							+ "    '재학중' as graduate\r\n"
+							+ "    '재학중' as graduate\r\n" /*if(student.student_graduate_yn = 'Y', '졸업생', '재학생') as '재학 여부'*/
 							+ "    FROM tb_school_info school\r\n"
 							+ "    INNER JOIN tb_student_info student\r\n"
 							+ "    on school.school_id = student.school_id\r\n"
@@ -68,7 +68,13 @@ public class jdbc_test2 {
 						rsMap.put("schoolName", rs.getString("schoolName"));
 						rsMap.put("schoolArea", rs.getString("schoolArea"));
 						rsMap.put("studentName", rs.getString("studentName"));
-						rsMap.put("graduate", rs.getString("graduate"));			
+						rsMap.put("graduate", rs.getString("graduate"));	
+						
+//						rsMap.put("schoolId", rs.getInt(1));
+//						rsMap.put("schoolName", rs.getString(2));
+//						rsMap.put("schoolArea", rs.getString(3));
+//						rsMap.put("studentName", rs.getString(4));
+//						rsMap.put("graduate", rs.getString("재학 여부"));			
 						list.add(rsMap);
 
 					}
